@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Droid Cafe</string>
+    <string name="action_contact">Contact</string>
+    <string name="action_order">Order</string>
+    <string name="action_status">Status</string>
+    <string name="action_favorites">Favorites</string>
+    <string name="first_fragment_label">Droid Cafe</string>
+
+    <string name="action_order_string">You have chosen order!</string>
+    <string name="action_contact_string">You have chosen contact!</string>
+    <string name="action_status_string">You have chosen status!</string>
+    <string name="action_favorites_string">You have chosen favorites!</string>
+
+    <!-- Strings used in first fragment -->
+    <string name="text_intro">Droid Desserts</string>
+    <string name="donuts">Donuts are glazed and sprinkled with candy.</string>
+    <string name="froyo">FroYo is premium self-serve frozen yogurt.</string>
+    <string name="ice_cream_sandwiches">Ice cream sandwiches have chocolate wafers and vanilla filling.</string>
+
+    <string name="donut_order_message">You ordered a donut.</string>
+    <string name="ice_cream_order_message">You ordered an ice cream sandwich</string>
+    <string name="froyo_order_message">You ordered a froyo.</string>
+
+    <!-- Strings used in order activity -->
+    <string name="name_textview">Name:</string>
+    <string name="name_textview_hint">Enter your name</string>
+    <string name="address_textview">Address:</string>
+    <string name="address_textview_hint">Enter your address</string>
+    <string name="phone_textview">Phone:</string>
+    <string name="phone_textview_hint">Enter your phone number</string>
+    <string name="note_textview">Note:</string>
+    <string name="note_textview_hint">Enter note</string>
+    <string name="delivery_textview">Choose a delivery method:</string>
+    <string name="first_radio_button">Same day messenger service</string>
+    <string name="second_radio_button">Next day ground delivery</string>
+    <string name="third_radio_button">Pick up</string>
+    <string name="openCart">Open cart</string>
+</resources>
