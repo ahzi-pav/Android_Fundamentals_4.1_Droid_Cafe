@@ -9,9 +9,16 @@
         <entry key="..\:/Users/paula/AndroidStudioProjects/DroidCafe/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/paula/AndroidStudioProjects/DroidCafe/app/src/main/res/layout/activity_order.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/paula/AndroidStudioProjects/DroidCafe/app/src/main/res/layout/content_main.xml" value="0.22" />
+        <entry key="..\:/Users/paula/AndroidStudioProjects/DroidCafe/app/src/main/res/layout/fragment_date_picker.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/paula/AndroidStudioProjects/DroidCafe/app/src/main/res/layout/fragment_first.xml" value="0.25" />
         <entry key="..\:/Users/paula/AndroidStudioProjects/DroidCafe/app/src/main/res/layout/fragment_second.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/paula/AndroidStudioProjects/DroidCafe/app/src/main/res/menu/context_menu.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/paula/AndroidStudioProjects/DroidCafe/app/src/main/res/menu/menu_context.xml" value="0.17447916666666666" />
         <entry key="..\:/Users/paula/AndroidStudioProjects/DroidCafe/app/src/main/res/menu/menu_main.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/paula/AndroidStudioProjects/DroidCafe/app/src/main/res/xml/pref_account.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/paula/AndroidStudioProjects/DroidCafe/app/src/main/res/xml/pref_general.xml" value="0.17447916666666666" />
+        <entry key="..\:/Users/paula/AndroidStudioProjects/DroidCafe/app/src/main/res/xml/pref_notification.xml" value="0.17447916666666666" />
+        <entry key="..\:/Users/paula/AndroidStudioProjects/DroidCafe/app/src/main/res/xml/root_preferences.xml" value="0.22" />
       </map>
     </option>
   </component>

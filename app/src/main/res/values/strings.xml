@@ -11,6 +11,8 @@
     <string name="action_status_string">You have chosen status!</string>
     <string name="action_favorites_string">You have chosen favorites!</string>
 
+    <string name="action_edit">Edit</string>
+
     <!-- Strings used in first fragment -->
     <string name="text_intro">Droid Desserts</string>
     <string name="donuts">Donuts are glazed and sprinkled with candy.</string>
@@ -35,4 +37,25 @@
     <string name="second_radio_button">Next day ground delivery</string>
     <string name="third_radio_button">Pick up</string>
     <string name="openCart">Open cart</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="datePicker">datePicker</string>
+    <string name="date_button">Date</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
 </resources>

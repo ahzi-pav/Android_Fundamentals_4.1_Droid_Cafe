@@ -1,16 +1,16 @@
 package com.example.droidcafe;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-
-import com.google.android.material.snackbar.Snackbar;
+import android.view.ContextMenu;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.view.View;
-
-import androidx.core.content.ContextCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -18,18 +18,17 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.example.droidcafe.databinding.ActivityMainBinding;
 
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.TextView;
-import android.widget.Toast;
-
 public class MainActivity extends AppCompatActivity {
+    public static final String EXTRA_MESSAGE = "com.example.android.droidcafe.extra.MESSAGE";
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
     private Toast toast;
-    public static final String EXTRA_MESSAGE = "com.example.android.droidcafe.extra.MESSAGE";
     private String mOrderMessage;
+
+    private TextView mDonutDescription;
+    private TextView mIcsDescription;
+    private TextView mFroyoDescription;
 
 
     @Override
@@ -45,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
 
+
         binding.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -59,6 +59,35 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        mDonutDescription = findViewById(R.id.donut_description);
+        mIcsDescription = findViewById(R.id.ics_description);
+        mFroyoDescription = findViewById(R.id.froyo_description);
+        registerForContextMenu(mDonutDescription);
+        registerForContextMenu(mIcsDescription);
+        registerForContextMenu(mFroyoDescription);
+
+    }
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View view,
+                                    ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, view, menuInfo);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.context_menu, menu);
+    }
+
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+
+        int id = item.getItemId();
+
+        if (id == R.id.action_edit) {
+            displayToast("You cant edit this text silly :p");
+            return true;
+        }
+
+        return super.onContextItemSelected(item);
     }
 
     @Override
@@ -74,20 +103,28 @@ public class MainActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_contact) {
-            displayToast(getString(R.string.action_contact_string));
-            return true;
-        } else if (id == R.id.action_favorites) {
-            displayToast(getString(R.string.action_favorites_string));
-            return true;
-        } else if (id == R.id.action_order) {
-            displayToast(getString(R.string.action_order_string));
-            return true;
-        } else if (id == R.id.action_status) {
-            displayToast(getString(R.string.action_status_string));
-            return true;
+        switch (id) {
+            case R.id.action_contact:
+                displayToast(getString(R.string.action_contact_string));
+                return true;
+            case R.id.action_favorites:
+                displayToast(getString(R.string.action_favorites_string));
+                return true;
+            case R.id.action_order:
+                if (mOrderMessage != null){
+                    Intent intent = new Intent(MainActivity.this, OrderActivity.class);
+                    intent.putExtra(EXTRA_MESSAGE, mOrderMessage);
+                    startActivity(intent);
+                    displayToast(getString(R.string.action_order_string));
+                } else {
+                    displayToast("Choose an order first!");
+                }
+                return true;
+            case R.id.action_settings:
+                Intent intent = new Intent(this, SettingsActivity.class);
+                startActivity(intent);
+                return true;
         }
 
         return super.onOptionsItemSelected(item);

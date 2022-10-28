@@ -19,11 +19,19 @@
         android:id="@+id/action_status"
         android:orderInCategory="20"
         android:title="@string/action_status"
-        app:showAsAction="never" />
+        android:icon="@drawable/ic_status_info"
+        app:showAsAction="always" />
 
     <item
         android:id="@+id/action_favorites"
         android:orderInCategory="30"
         android:title="@string/action_favorites"
+        android:icon="@drawable/ic_favorite"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="50"
+        android:title="Settings"
         app:showAsAction="never" />
 </menu>
